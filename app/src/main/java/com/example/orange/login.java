@@ -6,13 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -23,7 +20,7 @@ import java.util.regex.Pattern;
 
 public class login extends AppCompatActivity {
     private static final Pattern Password_Pattern =
-            Pattern.compile("^" + ".{6,15}" + "(?=.*[@#$%^&+=])" + "$");
+            Pattern.compile("^" + ".{6,15}"+ "$");
     private EditText inputEmail;
     private EditText inputpass;
     private FirebaseAuth mAuth;
@@ -40,13 +37,22 @@ public class login extends AppCompatActivity {
         findViewById(R.id.login_pg_b).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!(validateEmail() & validatePass())) {
+                if ((validatePass()==false && validateEmail())==false) {
+                    showErrorDialog("Check email pass");
                 } else {
                    login_activity();
                 }
             }
         });
 
+    }
+    private void showErrorDialog(String message){
+        new AlertDialog.Builder(this)
+                .setTitle("Oops")
+                .setMessage(message)
+                .setPositiveButton(android.R.string.ok, null )
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
     }
 
     private boolean validateEmail() {
@@ -65,7 +71,7 @@ public class login extends AppCompatActivity {
 
         }
     }
-    public static final String pass;
+
 
     private boolean validatePass() {
 
@@ -83,8 +89,10 @@ public class login extends AppCompatActivity {
             return true;
         }
     }
-    private void login_activity(){
+    public void login_activity(){
         Log.d("chat", "Login.......");
+        String Email = inputEmail.getText().toString();
+        String pass = inputpass.getText().toString();
         mAuth.signInWithEmailAndPassword(Email,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -101,12 +109,5 @@ public class login extends AppCompatActivity {
 
 
     }
-    private void showErrorDialog(String message){
-        new AlertDialog.Builder(this)
-                .setTitle("Oops")
-                .setMessage(message)
-                .setPositiveButton(android.R.string.ok, null )
-                .setIcon(android.R.drawable.ic_dialog_alert)
-                .show();
-    }
+
 }
