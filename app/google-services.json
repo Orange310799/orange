@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "206544328696",
+    "firebase_url": "https://orange-e34d4.firebaseio.com",
+    "project_id": "orange-e34d4",
+    "storage_bucket": "orange-e34d4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206544328696:android:6602cf1a7cbac7be2f680d",
+        "android_client_info": {
+          "package_name": "com.example.orange"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "206544328696-qqfh27mf94284rgsrqna1ofra3ddah64.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.orange",
+            "certificate_hash": "80ae78232202223d389c29cb537e6524421370bd"
+          }
+        },
+        {
+          "client_id": "206544328696-06anvqelabdnjeuq2pfeq8c4h4rhsk9m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsnMnWT3UL51qmMnDiLHQxyqhVGwxII30"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "206544328696-06anvqelabdnjeuq2pfeq8c4h4rhsk9m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
