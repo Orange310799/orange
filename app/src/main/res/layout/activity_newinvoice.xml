@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".newinvoice">
+
+    <TextView
+        android:id="@+id/Branddetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="Brand Details"
+        android:textColor="#4c68ef"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/Bank_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Bank_name"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/email"
+        android:ems="10"
+        android:hint="Brand Name"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Branddetails" />
+
+    <EditText
+        android:id="@+id/Brand_no"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/email"
+        android:hint="Brand Phone"
+        android:inputType="text"
+        android:paddingLeft="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/Bank_name"
+        app:layout_constraintStart_toStartOf="@+id/Bank_name"
+        app:layout_constraintTop_toBottomOf="@+id/Bank_name" />
+
+    <EditText
+        android:id="@+id/Brandadd"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/email"
+        android:ems="10"
+        android:hint="Brand Address"
+        android:inputType="textPostalAddress"
+        android:paddingLeft="20dp"
+        app:layout_constraintStart_toStartOf="@+id/Brand_no"
+        app:layout_constraintTop_toBottomOf="@+id/Brand_no" />
+
+    <EditText
+        android:id="@+id/Tamount"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/email"
+        android:ems="10"
+        android:hint="Total Amount"
+        android:inputType="number"
+        android:paddingLeft="20dp"
+        app:layout_constraintStart_toStartOf="@+id/Brandadd"
+        app:layout_constraintTop_toBottomOf="@+id/Brandadd" />
+
+    <EditText
+        android:id="@+id/Amountpaid"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Amount Paid"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/email"
+        app:layout_constraintStart_toStartOf="@id/Tamount"
+        app:layout_constraintTop_toBottomOf="@id/Tamount"/>
+
+    <EditText
+        android:id="@+id/Amountpending"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Amount Pending"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/email"
+        app:layout_constraintStart_toStartOf="@id/Amountpaid"
+        app:layout_constraintTop_toBottomOf="@id/Amountpaid"/>
+
+    <Button
+        android:id="@+id/Submit_b"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/sign_up"
+        android:fontFamily="@font/rubik_medium"
+        android:text="Submit"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/Amountpending"
+        app:layout_constraintTop_toBottomOf="@id/Amountpending" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

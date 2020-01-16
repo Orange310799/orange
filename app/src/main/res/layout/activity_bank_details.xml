@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".Bank_details">
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="Bank Details"
+        android:textColor="#4c68ef"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/Bank_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Bank_name"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/email"
+        android:ems="10"
+        android:hint="Bank Name"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <EditText
+        android:id="@+id/Branch_name"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/email"
+        android:hint="Branch"
+        android:inputType="text"
+        android:paddingLeft="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/Bank_name"
+        app:layout_constraintStart_toStartOf="@+id/Bank_name"
+        app:layout_constraintTop_toBottomOf="@+id/Bank_name" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/email"
+        android:paddingLeft="20dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toStartOf="@+id/Branch_name"
+        app:layout_constraintTop_toBottomOf="@+id/Branch_name" />
+
+    <EditText
+        android:id="@+id/Account_no"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/email"
+        android:ems="10"
+        android:hint="Account No"
+        android:inputType="number"
+        android:paddingLeft="20dp"
+        app:layout_constraintStart_toStartOf="@+id/spinner"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <EditText
+        android:id="@+id/confirm_acc_no"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/email"
+        android:ems="10"
+        android:hint="Confirm Account No"
+        android:inputType="number"
+        android:paddingLeft="20dp"
+        app:layout_constraintStart_toStartOf="@+id/Account_no"
+        app:layout_constraintTop_toBottomOf="@+id/Account_no" />
+
+    <EditText
+        android:id="@+id/Ifsc_code"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+        android:inputType="textCapCharacters"
+        android:hint="IFSC code"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/email"
+        app:layout_constraintStart_toStartOf="@id/confirm_acc_no"
+        app:layout_constraintTop_toBottomOf="@id/confirm_acc_no"/>
+
+    <Button
+        android:id="@+id/Signup_bank"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/sign_up"
+        android:fontFamily="@font/rubik_medium"
+        android:text="Sign up"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/Ifsc_code"
+        app:layout_constraintTop_toBottomOf="@id/Ifsc_code" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

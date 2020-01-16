@@ -13,9 +13,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity {
     Button l1,s1;
     TextView signupT;
+    FirebaseAuth.AuthStateListener mAuthListner;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
                                   @Override
                                   public void onClick(View view) {
                                       Intent Intent_two =new Intent(MainActivity.this,Signup.class);
+                                      finish();
                                       startActivity(Intent_two);
                                   }
                               }
